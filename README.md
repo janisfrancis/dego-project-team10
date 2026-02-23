@@ -1,7 +1,7 @@
 # DEGO Project - Team 10
 
 ## Team Members
-- [janisfrancis]
+- [janisfrancis] | 64674
 
 ## Project Description
 Credit scoring bias analysis for DEGO course.
