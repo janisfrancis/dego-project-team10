@@ -208,12 +208,12 @@ __marimo__/
 
 # === Project - specific additions ===
 # Data files (too large for Git)
-data /*. csv
-data /*. xlsx
+data/*.csv
+data/*.xlsx
 
 # Environment / secrets
 .env
 
 # OS files
-. DS_Store
-Thumbs .db
+.DS_Store
+Thumbs.db
