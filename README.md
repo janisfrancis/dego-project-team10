@@ -2,9 +2,9 @@
 
 ## Team Members
 - [janisfrancis] | 64674
-- [Justin Räker] | 70770
+- [justin-rkr] | 70770
 - [Fra73166] | 73166
-- [] |
+- [cxseiro] | 56517
 
 ## Project Description
 Credit scoring bias analysis for DEGO course.
