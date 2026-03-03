@@ -23,7 +23,7 @@ As the Governance Task Force, we have audited the credit application pipeline ag
 
 Our audit identified high-risk personal data (PII) including SSNs, emails, and IP addresses.
 
-Data Minimization (Art. 5): We found that ip_address is currently collected but not utilized in the risk scoring. We recommend removing this field to reduce exposure.
+Data Minimization (Art. 5):We found that ip_address is currently collected but not utilized in the risk scoring. We recommend removing this field to reduce exposure. 
 
 Privacy by Design (Art. 25): We demonstrated SHA-256 hashing for SSNs in 03-privacy-demo.ipynb to ensure pseudonymization at the ingestion layer.
 
