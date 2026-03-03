@@ -15,34 +15,34 @@ Credit scoring bias analysis for DEGO course.
 - ‘src /‘ - Python source code
 - ‘reports /‘ - Final deliverables
 
-Governance & Compliance Assessment (NovaCred)
 
-As the Governance Task Force, we have audited the credit application pipeline against GDPR and the EU AI Act frameworks.
 
-1. Privacy & Data Protection (GDPR)
 
-Our audit identified high-risk personal data (PII) including SSNs, emails, and IP addresses.
 
-Data Minimization (Art. 5):We found that ip_address is currently collected but not utilized in the risk scoring. We recommend removing this field to reduce exposure. 
+⚖️ 4. Data Governance & Regulatory Compliance
 
-Privacy by Design (Art. 25): We demonstrated SHA-256 hashing for SSNs in 03-privacy-demo.ipynb to ensure pseudonymization at the ingestion layer.
+As the Governance Officer, I conducted a regulatory audit of the NovaCred ecosystem. Our findings indicate that the current machine learning pipeline presents significant legal risks under the GDPR and the EU AI Act.
 
-Automated Decision-Making (Art. 22): The current system lacks a "Human-in-the-loop" mechanism. We propose a mandatory manual review for all "High Risk" rejections.
+4.1 Key Findings & Risks
 
-2. Algorithmic Fairness (AI Act)
+AI Act Classification: The credit scoring system is a High-Risk AI System (Annex III, 5b). It currently lacks the mandatory transparency and human oversight mechanisms required by law.
 
-The system is classified as High-Risk AI under Annex III of the EU AI Act.
+Privacy Gaps (GDPR):
 
-Bias Findings: Our analysis (see 02-bias-analysis.ipynb) detected a Disparate Impact Ratio (DIR) below 0.8 for gender and age groups.
+Art. 9 Violation: We identified the collection of sensitive behavioral data (e.g., "Alcohol" spending), which constitutes an unlawful processing of health-related inferences without explicit consent.
 
-Proxy Discrimination: ZIP codes were found to correlate strongly with protected attributes. We recommend removing geographic indicators from the training features.
+Art. 5 Failure: The system fails the Data Minimization principle by collecting metadata (IP addresses) that are irrelevant to credit risk assessment.
 
-3. Actionable Recommendations for CTO
+Proxy Discrimination: The use of zip_code as a feature facilitates indirect discrimination, as it correlates with protected groups identified in our Bias Analysis.
 
-Implement an Audit Trail: Every decision made by the algorithm must be logged with the specific feature weights used (Transparency requirement).
+4.2 Implemented & Proposed Controls
 
-Bias Monitoring Gate: Integrate a pre-deployment check that blocks any model with a DIR < 0.8.
+Pseudonymization Pipeline: We demonstrated the hashing of Social Security Numbers (SSN) using SHA-256 to ensure Privacy by Design (Art. 25).
 
-Data Retention Policy: Establish a 5-year deletion cycle for rejected applications to comply with storage limitation principles.
+Fairness Gate: We mandate the removal of zip_code from the training set and the implementation of a Bias-Gate (ensuring DIR > 0.8) before model deployment.
 
-Human Oversight: Appoint a Compliance Officer to review the "Algorithm Rejection" cases weekly.
+Human-in-the-Loop (HITL): We propose the creation of a manual review process for any loan rejection to comply with Art. 22 GDPR (Automated individual decision-making).
+
+Audit Trail: Every algorithmic decision must now be logged with specific feature importance scores to satisfy the Transparency (Art. 13 AI Act) requirement.
+
+Detailed analysis and technical demonstrations are available in notebooks/03-privacy-demo.ipynb.
