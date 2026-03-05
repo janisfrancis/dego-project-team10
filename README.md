@@ -44,4 +44,4 @@ Human-in-the-Loop (HITL): We propose the creation of a "Credit Review Committee"
 
 Data Retention Policy: We formulated a 5-year retention schedule for rejected applications to ensure compliance with the Storage Limitation principle.
 
-Detailed analysis and technical demonstrations are available in notebooks/03-privacy-demo.ipynb.
+Detailed analysis and technical demonstrations are available in notebooks/03-privacy-demo.ipynb.Minor update
