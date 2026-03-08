@@ -70,7 +70,7 @@ We audited 491 raw credit applications from NovaCred's lending system. The analy
 ## 1. Data Quality Findings
 
 **Notebook:** `notebooks/01-data-quality.ipynb`
-**Raw dataset:** 491 records | **Clean baseline:** 485 records
+**Raw dataset:** 491 records | **Clean baseline:** 484 records
 
 We audited the dataset across four dimensions — Uniqueness, Consistency, Completeness, and Validity.
 
@@ -106,7 +106,7 @@ We audited the dataset across four dimensions — Uniqueness, Consistency, Compl
 ## 2. Bias Detection & Fairness Findings
 
 **Notebook:** `notebooks/02-bias-analysis.ipynb`
-**Clean baseline:** 485 records
+**Clean baseline:** 484 records
 
 We applied the **Four-Fifths Rule (80% Rule)** as the primary test for disparate impact. A Disparate Impact Ratio (DIR) below 0.80 constitutes prima facie evidence of discrimination.
 
